@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Chat — Campaign</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h2>Connect Data Sources</h2>
+      <form id="connectForm">
+        <label><input type="checkbox" name="sources" value="Website" checked/> Website</label>
+        <label><input type="checkbox" name="sources" value="Shopify" checked/> Shopify</label>
+        <label><input type="checkbox" name="sources" value="Facebook Page" checked/> Facebook Page</label>
+        <h3>Channels</h3>
+        <label><input type="checkbox" name="channels" value="Email" checked/> Email</label>
+        <label><input type="checkbox" name="channels" value="SMS" checked/> SMS</label>
+        <label><input type="checkbox" name="channels" value="Push" checked/> Push</label>
+        <label><input type="checkbox" name="channels" value="WhatsApp" checked/> WhatsApp</label>
+        <button type="submit" id="connectBtn">Connect</button>
+      </form>
+      <div id="connections"></div>
+    </aside>
+
+    <main class="main">
+      <header><h1>Chat — Campaign</h1></header>
+      <section id="chat" class="chat"></section>
+      <form id="promptForm" class="prompt">
+        <input id="audienceInput" placeholder="Describe the target audience (e.g., 'abandoned-cart users')" />
+        <button type="submit">Generate Campaign</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
